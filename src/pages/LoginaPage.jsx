@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
 const LoginPage = () => {
-  const [phone, setPhone] = useState("+998901234567"); 
-  const [password, setPassword] = useState("123456"); 
+  const [phone, setPhone] = useState(""); 
+  const [password, setPassword] = useState(""); 
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
