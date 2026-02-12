@@ -135,9 +135,9 @@ const LoginPage = () => {
           toast.error(`❌ ${errorMessage}`);
         }
       } else if (error.code === 'ERR_NETWORK') {
-        toast.error("🌐 Could not connect to the server! Please check your internet connection.");
+        toast.error("Could not connect to the server! Please check your internet connection.");
       } else if (error.code === 'ECONNABORTED') {
-        toast.error("⏰ Connection timed out!");
+        toast.error(" Connection timed out!");
       } else {
         toast.error(error.message || "An unexpected error occurred!");
       }
@@ -283,21 +283,6 @@ const LoginPage = () => {
             Register Now
           </Link>
         </motion.p>
-      </motion.div>
-
-      <motion.div 
-        variants={itemVariants}
-        className="flex justify-center mt-12 space-x-8 text-gray-400 text-xs font-bold tracking-wider uppercase"
-      >
-        <span className="cursor-default uppercase hover:text-gray-600 transition-colors">
-          System operational
-        </span>
-        <span className="cursor-default uppercase hover:text-gray-600 transition-colors">
-          Privacy policy
-        </span>
-        <span className="cursor-default uppercase hover:text-gray-600 transition-colors">
-          support
-        </span>
       </motion.div>
     </motion.div>
   );
