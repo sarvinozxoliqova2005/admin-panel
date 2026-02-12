@@ -114,7 +114,7 @@ const NFCRegistration = () => {
                 {formData.uid ? <CheckCircle size={22} /> : <RefreshCw size={22} className="animate-spin" />}
               </div>
               <div className="overflow-hidden">
-                <p className="text-[10px] font-black uppercase opacity-60 tracking-widest">Status</p>
+                <p className="text-[10px] font-black uppercase opacity-60 tracking-widest">Ready to Scan</p>
                 <p className="text-sm font-bold truncate font-mono tracking-wider">{formData.uid || "Awaiting scan..."}</p>
               </div>
             </div>
@@ -191,12 +191,12 @@ const NFCRegistration = () => {
           </form>
 
           <motion.div variants={itemVariants} className="mt-5 pt-2 border-t border-slate-50 flex justify-center gap-5 items-center ">
-            <button onClick={() => navigate("/")} className="text-[10px] font-black uppercase text-indigo-600 flex items-center gap-2 hover:opacity-70 transition-all">
+            <button onClick={() => navigate("/")} className="text-[10px] font-black uppercase text-indigo-600 flex cursor-pointer items-center gap-2 hover:opacity-70 transition-all">
               <ArrowLeft size={14} /> Back to Dashboard
             </button>
             <button 
               onClick={() => setFormData({name:"", surname:"", phone:"", uid:"", balance:"0", password:""})} 
-              className="text-[10px] font-black uppercase text-red-400 flex items-center gap-1.5 hover:text-red-500 transition-all"
+              className="text-[10px] font-black uppercase text-red-400 flex items-center gap-1.5 hover:text-red-500 transition-all cursor-pointer"
             >
               <Trash2 size={14} /> Clear Form
             </button>

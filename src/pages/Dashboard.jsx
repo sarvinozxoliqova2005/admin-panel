@@ -5,6 +5,8 @@ import { IoIosCalendar } from "react-icons/io";
 import { IoSearch, IoSettings } from "react-icons/io5";
 import { MdDashboard, MdDirectionsBus } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,13 +26,19 @@ const itemVariants = {
 };
 
 const Dashboard = () => {
+
+  const info = JSON.parse(localStorage.getItem('user'))
+
+
   const [activeTab, setActiveTab] = useState("Dashboard");
   const [userData] = useState({
-    balance: 0,
+    balance: info.balans,
     percentage: 0,
-    name: "Alex Rivera",
-    email: "alex@nfcpay.com",
+    name: info.name,
+    email: info.surname,
   });
+
+
 
   return (
     <motion.div 
@@ -121,7 +129,7 @@ const Dashboard = () => {
               <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                 <div>
                   <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">Current Balance</p>
-                  <h3 className="text-4xl font-extrabold text-slate-800">${userData.balance.toLocaleString()}</h3>
+                  <h3 className="text-4xl font-extrabold text-slate-800">UZS {userData.balance.toLocaleString()}</h3>
                   <p className="text-emerald-500 text-[11px] font-bold mt-2 flex items-center gap-1">
                     ↗ +{userData.percentage}% <span className="text-slate-400 font-normal">from last week</span>
                   </p>

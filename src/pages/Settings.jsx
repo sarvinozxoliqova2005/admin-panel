@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { MdDashboard, MdSettings } from "react-icons/md";
 import { BsCreditCardFill, BsStopwatch } from "react-icons/bs";
 import { CgInsights } from "react-icons/cg";
+import { motion } from "framer-motion";
+
 
 const menuItems = [
   { label: "Dashboard", path: "/dashboard", icon: <MdDashboard size={18} /> },
