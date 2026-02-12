@@ -104,6 +104,7 @@ const LoginPage = () => {
               Phone Number
             </label>
             <input
+            autoComplete="off"
               type="text"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -122,6 +123,7 @@ const LoginPage = () => {
             </label>
             <div className="relative">
               <input
+              autoComplete="off"
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
