@@ -235,8 +235,8 @@ const Dashboard = () => {
                 <div>
                   <p className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wider">{t.currentBalance}</p>
                   <h3 className="text-4xl font-extrabold text-slate-800">
-                    UZS {userData.balance.toLocaleString()}
-                  </h3>
+  UZS {userData?.balance?.toLocaleString() || "0"}
+</h3>
                   <p className="text-emerald-500 text-[11px] font-bold mt-2 flex items-center gap-1">
                     ↗ +{userData.percentage}%{" "}
                     <span className="text-slate-400 font-normal">{t.fromLastWeek}</span>
